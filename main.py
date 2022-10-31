@@ -118,6 +118,51 @@ def get_data():
     with open('1_products_ids.json', 'w', encoding='utf-8') as file:
         json.dump(products_ids, file, indent=4, ensure_ascii=False)
 
+    json_data = {
+            'productIds': [
+                '30064042',
+                '30063252',
+                '30064044',
+                '30064397',
+                '30064391',
+                '30065373',
+                '30064394',
+                '30064398',
+                '30063160',
+                '30064197',
+                '30064392',
+                '30064063',
+                '30064028',
+                '30064043',
+                '30060626',
+                '30064741',
+                '30064399',
+                '30064486',
+                '30064489',
+                '30064196',
+                '30064070',
+                '30064487',
+                '30064198',
+                '30059343',
+            ],
+            'mediaTypes': [
+                'images',
+            ],
+            'category': True,
+            'status': True,
+            'brand': True,
+            'propertyTypes': [
+                'KEY',
+            ],
+            'propertiesConfig': {
+                'propertiesPortionSize': 5,
+            },
+            'multioffer': False,
+        }
+
+        response = requests.post('https://www.mvideo.ru/bff/product-details/list', cookies=cookies, headers=headers,
+                                 json=json_data)
+
 
 def main():
     get_data()
