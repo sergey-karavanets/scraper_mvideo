@@ -150,7 +150,10 @@ def get_data():
     }
 
     response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
-                            headers=headers)
+                            headers=headers).json()
+
+    with open('3_prices.json', 'w', encoding='utf-8') as file:
+        json.dump(response, file, indent=4, ensure_ascii=False)
 
 
 def main():
