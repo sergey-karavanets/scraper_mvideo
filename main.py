@@ -135,8 +135,11 @@ def get_data():
             'multioffer': False,
         }
 
-        response = requests.post('https://www.mvideo.ru/bff/product-details/list', cookies=cookies, headers=headers,
-                                 json=json_data)
+    response = requests.post('https://www.mvideo.ru/bff/product-details/list', cookies=cookies, headers=headers,
+                                 json=json_data).json()
+
+    with open('2_items.json', 'w', encoding='utf-8') as file:
+        json.dump(response, file, indent=4, ensure_ascii=False)
 
 
 def main():
