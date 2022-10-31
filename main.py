@@ -20,6 +20,8 @@ def get_data():
     if not os.path.exists('data'):
         os.mkdir('data')
 
+    s = requests.Session()
+
     response = requests.get('https://www.mvideo.ru/bff/products/listing', params=params, cookies=cookies,
                             headers=headers).json()
 
