@@ -81,6 +81,8 @@ def get_data():
     response = requests.post('https://www.mvideo.ru/bff/product-details/list', cookies=cookies, headers=headers,
                                  json=json_data).json()
 
+    products_ids_str = ','.join(products_ids_list)
+
     with open('2_items.json', 'w', encoding='utf-8') as file:
         json.dump(response, file, indent=4, ensure_ascii=False)
 
