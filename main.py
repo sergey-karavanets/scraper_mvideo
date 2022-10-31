@@ -194,6 +194,9 @@ def get_result():
         item['item_salePrice'] = prices.get('item_salePrice')
         item['item_bonus'] = prices.get('item_bonus')
 
+    with open('5_result.json', 'w', encoding='utf-8') as file:
+        json.dump(products_data, file, indent=4, ensure_ascii=False)
+
 def main():
     get_data()
 
