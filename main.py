@@ -116,7 +116,7 @@ def get_data():
 
 def get_result():
     global prices
-    with open('2_items.json', encoding='utf-8') as file:
+    with open('data/2_products_description.json', encoding='utf-8') as file:
         products_data = json.load(file)
 
     with open('4_items_prices.json', encoding='utf-8') as file:
