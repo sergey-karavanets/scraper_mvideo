@@ -28,7 +28,7 @@ def get_data():
 
     total_items = response.get('body').get('total')
 
-    if total_items in None:
+    if total_items is None:
         return '[!] No items'
 
     products_ids = response.get('body').get('products')
