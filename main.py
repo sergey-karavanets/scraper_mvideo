@@ -175,6 +175,7 @@ def get_data():
         json.dump(items_prices, file, indent=4, ensure_ascii=False)
 
 def get_result():
+    global prices
     with open('2_items.json', encoding='utf-8') as file:
         products_data = json.load(file)
 
@@ -188,6 +189,10 @@ def get_result():
 
         if product_id in products_prices:
             prices = products_prices[product_id]
+
+        item['item_basePrice'] = prices.get('item_basePrice')
+        item['item_salePrice'] = prices.get('item_salePrice')
+        item['item_bonus'] = prices.get('item_bonus')
 
 def main():
     get_data()
