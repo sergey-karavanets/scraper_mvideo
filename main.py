@@ -94,17 +94,17 @@ def get_data():
 
         material_prices = response.get('body').get('materialPrices')
 
-    for item in material_prices:
-        item_id = item.get('price').get('productId')
-        item_base_price = item.get('price').get('basePrice')
-        item_sale_price = item.get('price').get('salePrice')
-        item_bonus = item.get('bonusRubles').get('total')
+        for item in material_prices:
+            item_id = item.get('price').get('productId')
+            item_base_price = item.get('price').get('basePrice')
+            item_sale_price = item.get('price').get('salePrice')
+            item_bonus = item.get('bonusRubles').get('total')
 
-        items_prices[item_id] = {
-            'item_basePrice': item_base_price,
-            'item_salePrice': item_sale_price,
-            'item_bonus': item_bonus
-        }
+            items_prices[item_id] = {
+                'item_basePrice': item_base_price,
+                'item_salePrice': item_sale_price,
+                'item_bonus': item_bonus
+            }
 
     with open('4_items_prices.json', 'w', encoding='utf-8') as file:
         json.dump(items_prices, file, indent=4, ensure_ascii=False)
