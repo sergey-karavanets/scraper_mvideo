@@ -100,7 +100,7 @@ def get_data():
             item_sale_price = item.get('price').get('salePrice')
             item_bonus = item.get('bonusRubles').get('total')
 
-            items_prices[item_id] = {
+            products_prices[item_id] = {
                 'item_basePrice': item_base_price,
                 'item_salePrice': item_sale_price,
                 'item_bonus': item_bonus
