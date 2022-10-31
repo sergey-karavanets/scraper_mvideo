@@ -89,7 +89,7 @@ def get_data():
             'isPromoApplied': 'true',
         }
 
-    response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
+        response = s.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
                             headers=headers).json()
 
     with open('3_prices.json', 'w', encoding='utf-8') as file:
