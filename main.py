@@ -106,8 +106,6 @@ def get_data():
                 'item_bonus': item_bonus
             }
 
-    with open('4_items_prices.json', 'w', encoding='utf-8') as file:
-        json.dump(items_prices, file, indent=4, ensure_ascii=False)
 
 def get_result():
     global prices
