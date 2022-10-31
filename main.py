@@ -92,9 +92,6 @@ def get_data():
         response = s.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
                             headers=headers).json()
 
-    with open('3_prices.json', 'w', encoding='utf-8') as file:
-        json.dump(response, file, indent=4, ensure_ascii=False)
-
     items_prices = {}
 
     material_prices = response.get('body').get('materialPrices')
