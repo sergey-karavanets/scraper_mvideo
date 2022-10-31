@@ -141,6 +141,15 @@ def get_data():
     with open('2_items.json', 'w', encoding='utf-8') as file:
         json.dump(response, file, indent=4, ensure_ascii=False)
 
+    params = {
+        'productIds': '30064042,30063252,30064044,30064397,30064391,30065373,30064394,30064398,30063160,30064197,30064392,30064063,30064028,30064043,30060626,30064741,30064399,30064486,30064489,30064196,30064070,30064487,30064198,30059343',
+        'addBonusRubles': 'true',
+        'isPromoApplied': 'true',
+    }
+
+    response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
+                            headers=headers)
+
 
 def main():
     get_data()
