@@ -181,6 +181,8 @@ def get_result():
     with open('4_items_prices.json', encoding='utf-8') as file:
         products_prices = json.load(file)
 
+    products_data = products_data.get('body').get('products')
+
 def main():
     get_data()
 
