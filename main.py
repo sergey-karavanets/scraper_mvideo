@@ -122,6 +122,9 @@ def get_result():
     with open('data/3_products_prices.json', encoding='utf-8') as file:
         products_prices = json.load(file)
 
+    for items in products_data.values():
+        products = items.get('body').get('products')
+
     products_data = products_data.get('body').get('products')
 
     for item in products_data:
