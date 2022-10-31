@@ -55,6 +55,7 @@ def get_data():
                          headers=headers).json()
 
         products_ids_list = response.get('body').get('products')
+        products_id[i] = products_ids_list
 
     with open('1_products_ids.json', 'w', encoding='utf-8') as file:
         json.dump(products_ids, file, indent=4, ensure_ascii=False)
