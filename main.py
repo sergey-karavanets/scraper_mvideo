@@ -78,9 +78,6 @@ def get_data():
                                  json=json_data).json()
         products_description[i] = response
 
-    with open('1_products_ids.json', 'w', encoding='utf-8') as file:
-        json.dump(products_ids, file, indent=4, ensure_ascii=False)
-
     json_data = {
             'productIds': products_ids,
             'mediaTypes': [
