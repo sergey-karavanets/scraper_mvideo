@@ -1,5 +1,6 @@
 import requests
 import json
+from config import cookies, headers
 
 
 def get_data():
