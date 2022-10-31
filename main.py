@@ -112,6 +112,8 @@ def get_data():
     response = requests.get('https://www.mvideo.ru/bff/products/listing', params=params, cookies=cookies,
                             headers=headers).json()
 
+    products_ids = response.get('body').get('products')
+
 
 def main():
     get_data()
