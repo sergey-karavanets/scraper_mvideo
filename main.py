@@ -37,6 +37,20 @@ def get_data():
     products_description = {}
     products_prices = {}
 
+    for i in range(pages_count):
+        offset = f'{i * 24}'
+
+        params = {
+            'categoryId': '195',
+            'offset': offset,
+            'limit': '24',
+            'filterParams': [
+                'WyJza2lka2EiLCIiLCJkYSJd',
+                'WyJ0b2xrby12LW5hbGljaGlpIiwiIiwiZGEiXQ==',
+            ],
+            'doTranslit': 'true',
+        }
+
     products_ids = response.get('body').get('products')
 
     with open('1_products_ids.json', 'w', encoding='utf-8') as file:
