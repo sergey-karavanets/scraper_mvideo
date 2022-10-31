@@ -159,6 +159,12 @@ def get_data():
 
     material_prices = response.get('body').get('materialPrices')
 
+    for item in material_prices:
+        item_id = item.get('price').get('productId')
+        item_base_price = item.get('price').get('basePrice')
+        item_sale_price = item.get('price').get('salePrice')
+        item_bonus = item.get('bonusRubles').get('total')
+
 def main():
     get_data()
 
