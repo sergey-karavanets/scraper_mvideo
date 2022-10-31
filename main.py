@@ -25,6 +25,8 @@ def get_data():
     response = s.get('https://www.mvideo.ru/bff/products/listing', params=params, cookies=cookies,
                             headers=headers).json()
 
+    total_items = response.get('body').get('total')
+
     products_ids = response.get('body').get('products')
 
     with open('1_products_ids.json', 'w', encoding='utf-8') as file:
