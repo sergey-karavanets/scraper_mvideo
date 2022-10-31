@@ -183,6 +183,9 @@ def get_result():
 
     products_data = products_data.get('body').get('products')
 
+    for item in products_data:
+        product_id = item.get('productId')
+
 def main():
     get_data()
 
