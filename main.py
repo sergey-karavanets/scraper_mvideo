@@ -17,6 +17,9 @@ def get_data():
         'doTranslit': 'true',
     }
 
+    if not os.path.exists('data'):
+        os.mkdir('data')
+
     response = requests.get('https://www.mvideo.ru/bff/products/listing', params=params, cookies=cookies,
                             headers=headers).json()
 
