@@ -105,7 +105,8 @@ def get_data():
                 'item_salePrice': item_sale_price,
                 'item_bonus': item_bonus
             }
-
+    with open('data/1_products_ids.json', 'w', encoding='utf') as file:
+        json.dump(products_id, file, indent=4, ensure_ascii=False)
 
 def get_result():
     global prices
