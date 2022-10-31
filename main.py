@@ -136,8 +136,6 @@ def get_result():
             item['item_bonus'] = prices.get('item_bonus')
             item['item_link'] = f'https://www.mvideo.ru/products/{item.get("nameTranslit")}-{product_id}'
 
-    with open('5_result.json', 'w', encoding='utf-8') as file:
-        json.dump(products_data, file, indent=4, ensure_ascii=False)
 
 def main():
     get_data()
