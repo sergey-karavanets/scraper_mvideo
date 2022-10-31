@@ -125,15 +125,15 @@ def get_result():
     for items in products_data.values():
         products = items.get('body').get('products')
 
-    for item in products_data:
-        product_id = item.get('productId')
+        for item in products:
+            product_id = item.get('productId')
 
-        if product_id in products_prices:
-            prices = products_prices[product_id]
+            if product_id in products_prices:
+                prices = products_prices[product_id]
 
-        item['item_basePrice'] = prices.get('item_basePrice')
-        item['item_salePrice'] = prices.get('item_salePrice')
-        item['item_bonus'] = prices.get('item_bonus')
+            item['item_basePrice'] = prices.get('item_basePrice')
+            item['item_salePrice'] = prices.get('item_salePrice')
+            item['item_bonus'] = prices.get('item_bonus')
 
     with open('5_result.json', 'w', encoding='utf-8') as file:
         json.dump(products_data, file, indent=4, ensure_ascii=False)
