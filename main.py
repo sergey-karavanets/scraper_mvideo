@@ -78,23 +78,6 @@ def get_data():
                                  json=json_data).json()
         products_description[i] = response
 
-    json_data = {
-            'productIds': products_ids,
-            'mediaTypes': [
-                'images',
-            ],
-            'category': True,
-            'status': True,
-            'brand': True,
-            'propertyTypes': [
-                'KEY',
-            ],
-            'propertiesConfig': {
-                'propertiesPortionSize': 5,
-            },
-            'multioffer': False,
-        }
-
     response = requests.post('https://www.mvideo.ru/bff/product-details/list', cookies=cookies, headers=headers,
                                  json=json_data).json()
 
