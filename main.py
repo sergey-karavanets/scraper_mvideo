@@ -92,8 +92,6 @@ def get_data():
         response = s.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
                             headers=headers).json()
 
-    items_prices = {}
-
     material_prices = response.get('body').get('materialPrices')
 
     for item in material_prices:
