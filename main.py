@@ -199,6 +199,7 @@ def get_result():
 
 def main():
     get_data()
+    get_result()
 
 
 if __name__ == '__main__':
