@@ -22,7 +22,7 @@ def get_data():
 
     s = requests.Session()
 
-    response = requests.get('https://www.mvideo.ru/bff/products/listing', params=params, cookies=cookies,
+    response = s.get('https://www.mvideo.ru/bff/products/listing', params=params, cookies=cookies,
                             headers=headers).json()
 
     products_ids = response.get('body').get('products')
