@@ -31,6 +31,8 @@ def get_data():
     if total_items is None:
         return '[!] No items'
 
+    pages_count = math.ceil(total_items / 24)
+
     products_ids = response.get('body').get('products')
 
     with open('1_products_ids.json', 'w', encoding='utf-8') as file:
