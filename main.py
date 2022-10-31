@@ -83,8 +83,6 @@ def get_data():
 
         products_ids_str = ','.join(products_ids_list)
 
-    products_ids_str = ','.join(products_ids)
-
     params = {
         'productIds': products_ids_str,
         'addBonusRubles': 'true',
