@@ -155,6 +155,7 @@ def get_data():
     with open('3_prices.json', 'w', encoding='utf-8') as file:
         json.dump(response, file, indent=4, ensure_ascii=False)
 
+    items_prices = {}
 
 def main():
     get_data()
