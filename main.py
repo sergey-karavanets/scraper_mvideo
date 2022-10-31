@@ -175,7 +175,8 @@ def get_data():
         json.dump(items_prices, file, indent=4, ensure_ascii=False)
 
 def get_result():
-    pass
+    with open('2_items.json', encoding='utf-8') as file:
+        products_data = json.load(file)
 
 def main():
     get_data()
