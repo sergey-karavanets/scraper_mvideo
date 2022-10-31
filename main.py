@@ -33,6 +33,10 @@ def get_data():
 
     pages_count = math.ceil(total_items / 24)
 
+    products_id = {}
+    products_description = {}
+    products_prices = {}
+
     products_ids = response.get('body').get('products')
 
     with open('1_products_ids.json', 'w', encoding='utf-8') as file:
