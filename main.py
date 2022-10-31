@@ -83,11 +83,11 @@ def get_data():
 
         products_ids_str = ','.join(products_ids_list)
 
-    params = {
-        'productIds': products_ids_str,
-        'addBonusRubles': 'true',
-        'isPromoApplied': 'true',
-    }
+        params = {
+            'productIds': products_ids_str,
+            'addBonusRubles': 'true',
+            'isPromoApplied': 'true',
+        }
 
     response = requests.get('https://www.mvideo.ru/bff/products/prices', params=params, cookies=cookies,
                             headers=headers).json()
