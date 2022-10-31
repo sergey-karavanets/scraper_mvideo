@@ -27,6 +27,9 @@ def get_data():
 
     total_items = response.get('body').get('total')
 
+    if total_items in None:
+        return '[!] No items'
+
     products_ids = response.get('body').get('products')
 
     with open('1_products_ids.json', 'w', encoding='utf-8') as file:
