@@ -115,6 +115,9 @@ def get_data():
 
     products_ids = response.get('body').get('products')
 
+    with open('1_products_ids.json', 'w', encoding='utf-8') as file:
+        json.dump(products_ids, file, indent=4, ensure_ascii=False)
+
 
 def main():
     get_data()
