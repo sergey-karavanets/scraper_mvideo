@@ -186,6 +186,9 @@ def get_result():
     for item in products_data:
         product_id = item.get('productId')
 
+        if product_id in products_prices:
+            prices = products_prices[product_id]
+
 def main():
     get_data()
 
