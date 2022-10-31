@@ -157,6 +157,8 @@ def get_data():
 
     items_prices = {}
 
+    material_prices = response.get('body').get('materialPrices')
+
 def main():
     get_data()
 
