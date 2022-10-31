@@ -125,8 +125,6 @@ def get_result():
     for items in products_data.values():
         products = items.get('body').get('products')
 
-    products_data = products_data.get('body').get('products')
-
     for item in products_data:
         product_id = item.get('productId')
 
